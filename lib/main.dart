@@ -9,6 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  final String title = 'Mailboxes';
 
   // This widget is the root of your application.
   @override
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: loginPage(),
+      
     );
   }
 }
@@ -34,7 +36,7 @@ class _loginPage extends State<loginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Đăng nhập',
+          'Đăng nhập_',
         ),
       ),
       backgroundColor: Colors.blue.shade300,
@@ -143,7 +145,7 @@ class _loginPage extends State<loginPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const tryAgianPage(),
+                          builder: (context) => const tryAgainPage(),
                         ));
                   } else if (usernameController.text == passController.text) {
                     Navigator.push(
@@ -170,8 +172,8 @@ class _loginPage extends State<loginPage> {
   }
 }
 
-class tryAgianPage extends StatelessWidget {
-  const tryAgianPage({Key? key}) : super(key: key);
+class tryAgainPage extends StatelessWidget {
+  const tryAgainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
